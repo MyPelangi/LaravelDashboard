@@ -88,8 +88,8 @@ class SessionController extends Controller
             'password.required' => 'Password wajib diisi',
             'password.min' => 'Minimum password yang diizinkan adalah 6 karakter',
             'password.confirmed' => 'Konfirmasi password harus sama dengan password',
-            'agree.required' => 'You must agree to the terms and conditions',
-            'agree.accepted' => 'You must accept the terms and conditions',
+            'agree.required' => 'Terms and Condition harus di ceklis',
+            'agree.accepted' => 'Terms and Condition harus disetujui',
         ]);
 
         // if($validate->fails()){
@@ -117,7 +117,7 @@ class SessionController extends Controller
             return redirect('/home')->with('success','Yey! Kamu berhasil Login!');
         }else{
             // kalau otentikasi gagal
-            return redirect('/register')->withErrors('kamu tidak berhasil melakukan register');
+            return redirect('/register')->withErrors($validate);
         }
     }
 }

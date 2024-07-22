@@ -8,11 +8,12 @@
                 <div class="login-brand">
                 <h1>Toko Segar</h1>
                 </div>
-
+                
                 <div class="card card-primary">
                     <div class="card-header"><h4>Login</h4></div>
 
                     <div class="card-body">
+                        @include('partials/pesan')
                         <form method="POST" action="/login" class="needs-validation" novalidate="">
                             @csrf
                             <div class="form-group">
@@ -55,19 +56,6 @@
                                 Don't have an account? <a href="register">Create One</a>
                         </div>
                     </div>
-                    {{-- <div class="row sm-gutters">
-                    <div class="col-6">
-                        <a class="btn btn-block btn-social btn-facebook">
-                        <span class="fab fa-facebook"></span> Facebook
-                        </a>
-                    </div>
-                    <div class="col-6">
-                        <a class="btn btn-block btn-social btn-twitter">
-                        <span class="fab fa-twitter"></span> Twitter
-                        </a>
-                    </div>
-                    </div> --}}
-
                 </div>
                 <div class="simple-footer">
                     Copyright &copy; Pelangi Dwi Mawarni 2024
